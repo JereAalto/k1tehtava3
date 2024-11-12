@@ -372,6 +372,9 @@
         return receiver;
       return J.getNativeInterceptor(receiver);
     },
+    set$text$x(receiver, value) {
+      return J.getInterceptor$x(receiver).set$text(receiver, value);
+    },
     get$iterator$ax(receiver) {
       return J.getInterceptor$ax(receiver).get$iterator(receiver);
     },
@@ -3718,7 +3721,13 @@
       A._EventStreamSubscription$(t1._target, t1._eventType, t2._eval$1("~(1)?")._as(A.koodi__kasittele$closure()), false, t2._precomputed1);
     },
     kasittele(e) {
-      A.File_File("C:\\Users\\Jere1\\Documents\\koodi\\K1Projekti\\data.txt").writeAsString$1(A.S(document.querySelector("#nimi")));
+      var otsikko,
+        f = A.File_File("C:\\Users\\Jere1\\Documents\\koodi\\K1Projekti\\data.txt"),
+        t1 = document;
+      f.writeAsString$1(A.S(t1.querySelector("#nimi")));
+      otsikko = t1.querySelector("#luku");
+      otsikko.toString;
+      J.set$text$x(otsikko, "1");
     }
   },
   B = {};
@@ -5114,6 +5123,9 @@
     toString$0(receiver) {
       var value = receiver.nodeValue;
       return value == null ? this.super$Interceptor$toString(receiver) : value;
+    },
+    set$text(receiver, value) {
+      receiver.textContent = value;
     }
   };
   A.SelectElement.prototype = {
