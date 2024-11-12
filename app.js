@@ -3713,21 +3713,19 @@
       A.throwExpressionWithWrapper(new A.LateError("Field '" + fieldName + "' has been assigned during initialization."), new Error());
     },
     main() {
-      var t2,
-        t1 = document.querySelector("#nappi");
-      t1.toString;
-      t1 = J.get$onClick$x(t1);
-      t2 = t1.$ti;
-      A._EventStreamSubscription$(t1._target, t1._eventType, t2._eval$1("~(1)?")._as(A.koodi__kasittele$closure()), false, t2._precomputed1);
-    },
-    kasittele(e) {
-      var elementti,
-        f = A.File_File("C:\\Users\\Jere1\\Documents\\koodi\\K1Projekti\\data.txt"),
-        t1 = document;
-      f.writeAsString$1(A.S(t1.querySelector("#nimi")));
+      var t3, elementti,
+        t1 = document,
+        t2 = t1.querySelector("#nappi");
+      t2.toString;
+      t2 = J.get$onClick$x(t2);
+      t3 = t2.$ti;
+      A._EventStreamSubscription$(t2._target, t2._eventType, t3._eval$1("~(1)?")._as(A.koodi__kasittele$closure()), false, t3._precomputed1);
       elementti = t1.querySelector("#teksti");
       if (elementti != null)
         J.set$text$x(elementti, "Min\xe4 muutuin!");
+    },
+    kasittele(e) {
+      A.File_File("C:\\Users\\Jere1\\Documents\\koodi\\K1Projekti\\data.txt").writeAsString$1(A.S(document.querySelector("#nimi")));
     }
   },
   B = {};
